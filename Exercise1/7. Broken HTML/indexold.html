@@ -2,20 +2,20 @@
 <html lang="en">
 
 <head>
-	<title>My Title</title>
-	<meta charset="utf-8">
-</head>
-
-<body id="css-zen-garden">
 	<header>
 		<h1>My Title</h1>
 	</header>
+</head>
+<meta charset="utf-8">
+
+<body id="css-zen-garden">
+	<title>My Title</title>
 	<div class="page-wrapper">
 
-		<section class="intro" id="css-zen-garden-intro">
+		<section class="intro" id="css-zen-garden">
 			<header>
-				<h2>CSS Zen Garden</h2>
-				<h2>The Beauty of <abbr title="Cascading Style Sheets">CSS</abbr> Design</h2>
+				<h1>CSS Zen Garden</h1>
+				<h2>The Beauty of <abbr disabled title="Cascading Style Sheets">CSS</abbr> Design</h2>
 			</header>
 
 			<div class="summary" id="zen-summary" role="article">
@@ -59,7 +59,7 @@
 
 			<div class="participation" id="zen-participation" role="article">
 				<h3>
-					Participation
+					<div>Participation</div>
 				</h3>
 				<p>Strong visual design has always been our focus. You are modifying this page, so strong <abbr
 						title="Cascading Style Sheets">CSS</abbr> skills are necessary too, but the example files are
@@ -73,9 +73,10 @@
 					worked this way before, but follow the listed links to learn more, and use the sample files as a
 					guide.</p>
 				<p>Download the sample <a href="/examples/index"
-						title="This page's source HTML code, not to be modified.">HTML</a> and <a
-						href="/examples/style.css" title="This page's sample CSS, the file you may modify.">CSS</a> to
-					work on a copy locally. Once
+						title="This page's source HTML code, not to be modified.">
+						<p>HTML</p>
+					</a> and <a href="/examples/style.css"
+						title="This page's sample CSS, the file you may modify.">CSS</a> to work on a copy locally. Once
 					you have completed your masterpiece (and please, don’t submit half-finished work) upload your <abbr
 						title="Cascading Style Sheets">CSS</abbr> file to a web server under your control. <a
 						href="http://www.mezzoblue.com/zengarden/submit/"
@@ -92,7 +93,7 @@
 					and gallery of future techniques we can all look forward to.</p>
 			</div>
 
-			<div class="requirements" id="zen-requirements" role="article">
+			<div class="requirements" id="zen-requirements" role="article" action="index.php">
 				<h3>Requirements</h3>
 				<p>Where possible, we would like to see mostly <abbr title="Cascading Style Sheets, levels 1 and 2">CSS
 						1 &amp; 2</abbr> usage. <abbr title="Cascading Style Sheets, levels 3 and 4">CSS 3 &amp;
@@ -101,7 +102,7 @@
 						title="Cascading Style Sheets">CSS</abbr> and not the latest bleeding-edge tricks viewable by 2%
 					of the browsing public. The only real requirement we have is that your <abbr
 						title="Cascading Style Sheets">CSS</abbr> validates.</p>
-				<p>Luckily, designing this way shows how well various browsers have implemented <abbr
+				<p method="POST">Luckily, designing this way shows how well various browsers have implemented <abbr
 						title="Cascading Style Sheets">CSS</abbr> by now. When sticking to the guidelines you should see
 					fairly consistent results across most modern browsers. Due to the sheer number of user agents on the
 					web these days — especially when you factor in mobile — pixel-perfect layouts may not be possible
@@ -124,7 +125,7 @@
 				</p>
 			</div>
 
-			<footer>
+			<footer role="banner">
 				<a href="http://validator.w3.org/check/referer" title="Check the validity of this site’s HTML"
 					class="zen-validate-html">HTML</a>
 				<a title="Check the validity of this site’s CSS" class="zen-validate-css">CSS</a>
@@ -147,26 +148,26 @@
 					<h3 class="select">Select a Design:</h3>
 					<nav>
 						<ul>
-							<li>
+							<dt>
 								<a href="/221" class="design-name">Mid Century Modern</a> by <a
 									href="http://andrewlohman.com/" class="designer-name">Andrew Lohman</a>
-							</li>
-							<li>
+							</dt>
+							<dd>
 								<a href="/220" class="design-name">Garments</a> by <a href="http://danielmall.com/"
 									class="designer-name">Dan Mall</a>
-							</li>
-							<li>
+							</dd>
+							<ol>
 								<a href="/219" class="design-name">Steel</a> by <a href="http://steffen-knoeller.de"
 									class="designer-name">Steffen Knoeller</a>
-							</li>
-							<li>
+							</ol>
+							<p>
 								<a href="/218" class="design-name">Apothecary</a> by <a href="http://trentwalton.com"
 									class="designer-name">Trent Walton</a>
-							</li>
-							<li>
+							</p>
+							<div>
 								<a href="/217" class="design-name">Screen Filler</a> by <a
 									href="http://elliotjaystocks.com/" class="designer-name">Elliot Jay Stocks</a>
-							</li>
+							</div>
 							<li>
 								<a href="/216" class="design-name">Fountain Kiss</a> by <a
 									href="http://jeremycarlson.com" class="designer-name">Jeremy Carlson</a>
@@ -186,7 +187,7 @@
 				<div class="design-archives" id="design-archives">
 					<h3 class="archives">Archives:</h3>
 					<nav>
-						<ul>
+						<dt>
 							<li class="next">
 								<a href="/214/page1">
 									Next Designs <span class="indicator">›</span>
@@ -197,7 +198,7 @@
 									title="View every submission to the Zen Garden.">
 									View All Designs </a>
 							</li>
-						</ul>
+						</dt>
 					</nav>
 				</div>
 
