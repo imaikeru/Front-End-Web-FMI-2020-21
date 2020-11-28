@@ -84,11 +84,13 @@ p {
 }
 
 .profile-picture.posting {
+    margin-right:0.25rem;
     width: 2rem;
     height: 2rem;
 }
 
 .profile-picture.post {
+    margin-top:1rem;
     width: 2.5rem;
     height: 2.5rem;
 }
@@ -96,14 +98,15 @@ p {
 .picture-container {
     width: 4rem;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
 }
 
 .write-post-wrapper {
+    box-sizing: border-box;
     width: 29rem;
-    margin-left: 0.5rem;
+    margin-left:1rem;
+    margin-right:1rem;
     background-color: white;
-
 }
 
 .article {
@@ -116,8 +119,9 @@ p {
 }
 
 article {
+    box-sizing: border-box;
     padding: 1rem;
-    width: 29rem;
+    width: 31rem;
 }
 
 .main-container {
@@ -155,6 +159,7 @@ article {
 .post-input {
     border: none;
     outline: none;
+    width:inherit;
 }
 
 .post-input::placeholder {
@@ -236,7 +241,6 @@ article {
 .article-footer {
     box-sizing: border-box;
     padding-top:12px;
-    height: 5rem;
     width: 7rem;
     display: flex;
     flex-direction: row;
