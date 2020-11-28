@@ -1,0 +1,277 @@
+* {
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    font-size: 16px;
+}
+
+html, body, .root {
+    min-height: 100%;
+    height: 100%;
+}
+
+.forum-container {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(110deg, rgba(176, 167, 247, 1) 0%, rgba(177, 224, 242, 1) 85%);
+    height: 100%;
+}
+
+h1 {
+    margin: 0;
+    font-weight: unset;
+}
+
+h4, h5 {
+    margin: 0;
+    padding-right: 2px;
+}
+
+p {
+    margin: 0;
+    margin-top: 5px;
+}
+
+.heading {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 50px; */
+}
+
+.search-input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    margin-left: 3px;
+}
+
+.base-wrapper {
+    box-sizing: border-box;
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    border-radius: 16px;
+    border: 1px solid #EEF0FD;
+    height: 30px;
+    padding: 5px;
+}
+
+.message-icon {
+    background-color: transparent;
+    display: inline;
+    width: 20px;
+    height: 19px;
+}
+
+.search-icon {
+    background-color: transparent;
+    display: inline;
+    width: 15px;
+}
+
+.profile-picture {
+    width: 60px;
+    height: 60px;
+    border: unset;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.profile-picture.posting {
+    width: 2rem;
+    height: 2rem;
+}
+
+.profile-picture.post {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.picture-container {
+    width: 4rem;
+    display: flex;
+    justify-content: right;
+}
+
+.write-post-wrapper {
+    width: 29rem;
+    margin-left: 0.5rem;
+    background-color: white;
+
+}
+
+.article {
+    display: flex;
+    flex-direction: row;
+}
+
+.article-main {
+    width: 28rem;
+}
+
+article {
+    padding: 1rem;
+    width: 29rem;
+}
+
+.main-container {
+    box-sizing: border-box;
+    margin: 3px;
+    margin: 3px;
+}
+
+.posts {
+    max-width: 55rem;
+    width: 35rem;
+}
+
+.post-article {
+    box-sizing: border-box;
+    /* padding: 20px; */
+    background-color: white;
+    border-top: 1px solid #F4F4F4;
+}
+
+.message-posting {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0;
+    width: inherit;
+    background-color: #f2fbfd;
+}
+
+.post-input {
+    border: none;
+    outline: none;
+}
+
+.post-input::placeholder {
+    color: #54BDD6;
+}
+
+.profile {
+    width: 14rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-start;
+    max-width: 18rem;
+}
+
+.profile main {
+    width: inherit;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    background-color: white;
+    font-weight: bold;
+}
+
+.footer-container {
+    box-sizing: border-box;
+    padding-right: 14px;
+    padding-left: 14px;
+    height: 3.5rem;
+    width: inherit;
+    display: flex;
+    background-color: #F6F7FD;
+    font-weight: bold;
+}
+
+.profile-statistic {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-statistics {
+    width: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profile-statistic-name {
+    font-size: 12px;
+    color: #9FA1AB;
+}
+
+.profile-statistic-value {
+    font-weight: bold;
+    color: #54BDD6;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.log-out-button {
+    box-sizing: border-box;
+    border: 1px solid #54BDD6;
+    border-radius: 20px;
+    color: #54BDD6;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.article-footer {
+    box-sizing: border-box;
+    padding-top:12px;
+    height: 5rem;
+    width: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.article-header {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.post-data-wrapper {
+    display: flex;
+    justify-content: right;
+}
+
+.post-data {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-data h5 {
+    color: #A3A3A3;
+}
+
+.remove-post {
+    display: inline;
+    width: 8px;
+    height: 8px;
+}
+
+.like-counter, .dislike-counter {
+    width: 12px;
+}
