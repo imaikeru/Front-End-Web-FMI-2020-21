@@ -7,14 +7,31 @@
 }
 
 .title {
+    font-weight: 200;
     font-size: 2.5rem;
 }
 
-html,
-body {
+.description {
+    color: rgb(155, 148, 148);
+    font-weight: 500;
+}
+
+html, body {
     width: 100%;
     height: 100%;
     font-size: 16px;
+}
+
+body {
+    background: linear-gradient(45deg, rgba(222, 176, 97, 1) 0%, rgba(244, 241, 241, 1) 50%, rgba(222, 176, 97, 1) 100%);
+}
+
+.title {
+    margin-bottom: 1rem;
+}
+
+.description {
+    margin-bottom: 3.5rem;
 }
 
 .layout-container {
@@ -40,12 +57,73 @@ body {
 }
 
 .auth-form {
+    border-radius: 0.5rem;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     max-height: 90%;
-    max-width: 60rem;
+    max-width: 32rem;
     width: 90%;
     padding: 2.5rem;
+}
+
+.auth-input {
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(155, 148, 148);
+}
+
+.auth-input:focus {
+    border: 2px solid #108ccc;
+}
+
+.auth-to-register {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.auth-to-register-link {
+    width: 50%;
+}
+
+.auth-button {
+    font-size: 1rem;
+    border: none;
+    width: 100%;
+    height: 2.5rem;
+    cursor: pointer;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.auth-button.login:hover,
+.auth-button.login:active,
+.auth-button.login:focus {
+    background-color: #108ccc;
+}
+
+.auth-button.register:hover,
+.auth-button.register:active,
+.auth-button.register:focus {
+    background-color: #13ac3b;
+}
+
+.auth-button.login {
+    background-color: #1aa9d6;
+}
+
+.auth-button.register {
+    background-color: #0dd259;
+}
+
+.button-divider {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .info {
