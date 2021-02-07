@@ -9,14 +9,18 @@
 .title {
     font-weight: 200;
     font-size: 2.5rem;
+    text-align: center;
 }
 
 .description {
     color: rgb(155, 148, 148);
     font-weight: 500;
+    text-align: center;
+    font-style: italic;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
     font-size: 16px;
@@ -38,22 +42,9 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
-}
-
-.info-container {
-    display: flex;
-    align-content: center;
-    width: 25%;
-    height: 25%;
-}
-
-.auth-form-container {
-    width: 65%;
-    height: 65%;
-    display: flex;
 }
 
 .auth-form {
