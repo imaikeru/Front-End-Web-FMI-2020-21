@@ -1,3 +1,21 @@
+const initializeFirebase = () => {
+    var firebaseConfig = {
+        apiKey: "AIzaSyDITrQRXodSzP7NhmyFMQKZ7qhpMZp4Irs",
+        authDomain: "bookify-deae8.firebaseapp.com",
+        projectId: "bookify-deae8",
+        storageBucket: "bookify-deae8.appspot.com",
+        messagingSenderId: "63070453636",
+        appId: "1:63070453636:web:4088cf2fee0a21a6e4a7d1",
+        measurementId: "G-3H9DRED6JE"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    alert("Initialized firebase");
+}
+
+initializeFirebase();
+
 const loginFormElement = document.getElementById("login-form");
 const registerFormElement = document.getElementById("register-form");
 
@@ -92,7 +110,7 @@ const validateEmail = (email) => {
 
 if (loginFormElement) {
     const logInButton = document.getElementsByClassName("login");
-    logInButton.addEventListener("submit", event => {
+    loginFormElement.addEventListener("submit", event => {
         event.preventDefault();
 
         const emailValue = emailFormElement.value;
@@ -108,6 +126,8 @@ if (loginFormElement) {
             // alert("Invalid login data");
         }
     });
+
+
 } else if (registerFormElement) {
     registerFormElement.addEventListener("submit", event => {
         event.preventDefault();
@@ -124,10 +144,19 @@ if (loginFormElement) {
         if (hasCorrectEmail && hasCorrectPassword && hasCorrectRepeatPassword) {
             if (!passwordsMatch) {
                 printErrorMessage(repeatPasswordErrorFE, "Passwords do not match.");
+            } else {
+                alert("passwords match");
+                firebase.auth().createUserWithEmailAndPassword(email, password)
+                    .then((userCredential) => {
+                        var user = userCredential.user;
+                        window.location.replace = "/user_list"
+                    })
+                    .catch((error) => {
+                        var errorCode = error.code;
+                        var errorMessage = error.message;
+                        alert(errorMessage);
+                    });
             }
-        }
-        else {
-            // alert("Invalid register data");
         }
     })
 }

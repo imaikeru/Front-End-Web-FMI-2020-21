@@ -9,22 +9,26 @@
 
 <body>
     <div class="layout-container">
-        <form class="auth-form" id="login-form">
-            <h1 class="title">Bookify</h1>
-            <h2 class="description">Track your reading journey</h2>
-            <input type="text" class="auth-input" name="email" placeholder="Email" autocomplete="off">
-            <div id="email-error" class="errors">*</div>
-            <input type="password" class="auth-input" name="password" placeholder="Password">
-            <div id="password-error" class="errors">*</div>
-            <button type="submit" class="auth-button login">Log In</button>
+        <div class="form-container">
+            <form class="auth-form" id="login-form">
+                <h1 class="title">Bookify</h1>
+                <h2 class="description">Track your reading journey</h2>
+                <input type="text" class="auth-input" name="email" placeholder="Email" autocomplete="off">
+                <div id="email-error" class="errors">*</div>
+                <input type="password" class="auth-input" name="password" placeholder="Password">
+                <div id="password-error" class="errors">*</div>
+                <button type="submit" class="auth-button login">Log In</button>
+            </form>
             <hr class="button-divider">
             <div class="auth-to-register">
                 <a href="register.html" class="auth-to-register-link">
-                    <button class="auth-button register">Create New Account</button>
+                    <button type="submit" class="auth-button register">Create New Account</button>
                 </a>
             </div>
-        </form>
+        </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
     <script src="authentication.js"></script>
 </body>
 

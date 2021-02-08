@@ -40,16 +40,6 @@ body {
     flex-direction: row;
 }
 
-.auth-form {
-    border-radius: 0.5rem;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    max-height: 90%;
-    max-width: 32rem;
-    width: 90%;
-    padding: 2.5rem;
-}
 
 .auth-input {
     height: 2.5rem;
@@ -64,10 +54,31 @@ body {
     border: 2px solid #108ccc;
 }
 
+.form-container {
+    display:flex;
+    flex-direction: column;
+    background-color:white;
+    border-radius: 0.5rem;
+    max-height: 90%;
+    max-width: 32rem;
+    width: 90%;
+    padding: 2.5rem;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .auth-to-register {
     width: 100%;
-    display: flex;
     justify-content: center;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    display: flex;
+    align-content: center;
+    width: 100%;
 }
 
 .auth-to-register-link {
@@ -122,3 +133,4 @@ body {
     color: red;
     visibility: hidden;
 }
+
