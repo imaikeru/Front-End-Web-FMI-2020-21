@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    outline: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 45deg, rgba(222, 176, 97, 1) 0%, rgba(244, 241, 241, 1) 50%, rgba(222, 176, 97, 1) 100%);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo-picture {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: unset;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.app-name {
+    margin-block-start: unset;
+    margin-block-end: unset;
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+.log-out-button {
+    font-size: 1rem;
+    border: none;
+    width: 100%;
+    height: 2rem;
+    cursor: pointer;
+    color: white;
+    border-radius: 1rem;
+    background-color: rgba(222, 176, 97, 1);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.log-out-button:hover,
+.log-out-button:active,
+.update-progress-button:hover,
+.update-progress-button:active,
+.change-page-button:hover,
+.change-page-button:active {
+    background-color: #c38519;
+}
+
+.user-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-email {
+    padding-right: 0.5rem;
+}
+
+.background-container {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(222, 176, 97, 1) 0%, rgba(244, 241, 241, 1) 50%, rgba(222, 176, 97, 1) 100%);
+}
+
+.user-statistics {
+    /* background-color: white; */
+    width: 100%;
+    margin-right: 0.5rem;
+    max-width: 22rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #F6F7FE;
+    margin-right: 0.5rem;
+}
+
+.update-progress-button,
+.change-page-button {
+    font-size: 1rem;
+    border: none;
+    width: 100%;
+    height: 1.75rem;
+    cursor: pointer;
+    color: white;
+    border-radius: 1rem;
+    background-color: rgba(222, 176, 97, 1);
+}
+
+.update-progress-button {
+    padding: 0 1rem;
+}
+
+.change-page-button {
+    padding: 0 0.5rem;
+}
+
+
+/* .update-progress-button:hover,
+.update-progress-button:active,
+.change-page-button:hover,
+.change-page-button:active {
+    background-color: #c38519;
+} */
+
+.user-statistic {
+    display: flex;
+    flex-direction: column;
+    padding-right: 0.5rem;
+}
+
+.user-statistics-wrapper {
+    display: flex;
+}
+
+.books-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 55rem;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0.5rem auto;
+    background: transparent;
+}
+
+.update-progress {
+    height: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(155, 148, 148);
+}
+
+.update-progress[name=isbn] {
+    width: 9rem;
+    margin: 0.5rem;
+}
+
+.update-progress[name=pages] {
+    width: 4rem;
+    margin-right: 0.5rem;
+}
+
+.book-progress-adding {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 3rem;
+    align-items: center;
+    border-bottom: 1px solid rgb(155, 148, 148);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.user-info-container {
+    background-color: #F6F7FE;
+    margin-right: 0.5rem;
+}
+
+.user-statistic-name {
+    color: #848694;
+    font-weight: 600;
+}
+
+.update-progress-button {}
+
+@media screen and (max-width: 55.5rem) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+        align-items: stretch;
+    }
+    .user-info-container {
+        margin-right: 0;
+        max-width: 100%;
+    }
+    .user-statistics {
+        max-width: 100%;
+        align-items: center;
+        padding: 0.5rem 1rem;
+    }
+    .user-statistic {
+        flex-direction: row;
+    }
+    .user-statistic-name {
+        margin-right: 0.25rem;
+    }
+}

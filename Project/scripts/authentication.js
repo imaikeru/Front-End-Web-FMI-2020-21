@@ -6,12 +6,13 @@ const initializeFirebase = () => {
         storageBucket: "bookify-deae8.appspot.com",
         messagingSenderId: "63070453636",
         appId: "1:63070453636:web:4088cf2fee0a21a6e4a7d1",
-        measurementId: "G-3H9DRED6JE"
+        measurementId: "G-3H9DRED6JE",
+        databaseURL: "https://bookify-deae8-default-rtdb.europe-west1.firebasedatabase.app/"
     };
 
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
-    alert("Initialized firebase");
+    // alert("Initialized firebase");
 }
 
 initializeFirebase();
@@ -124,7 +125,7 @@ if (loginFormElement) {
                 .then((userCredential) => {
                     // Signed in
                     var user = userCredential.user;
-                    // ...
+                    window.location = "F:/FMI/Front-End-Web-FMI-2020-21/Project/user_list.html"
                 })
                 .catch((error) => {
                     var errorCode = error.code;
@@ -156,7 +157,8 @@ if (loginFormElement) {
                 firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
                     .then((userCredential) => {
                         var user = userCredential.user;
-                        window.location = "login.html";
+                        window.location = "F:/FMI/Front-End-Web-FMI-2020-21/Project/user_list.html"
+                        console.log(user);
                     })
                     .catch((error) => {
                         var errorCode = error.code;
