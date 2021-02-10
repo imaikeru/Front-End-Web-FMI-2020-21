@@ -30,32 +30,153 @@
             <div class="user-statistics-wrapper">
                 <div class="user-statistic">
                     <label class="user-statistic-name">In Progress</label>
-                    <label class="user-statistic-value">1</label>
+                    <label class="user-statistic-value in-progress"></label>
                 </div>
                 <div class="user-statistic">
-                    <label class="user-statistic-name">Finished</label>
-                    <label class="user-statistic-value">1</label>
+                    <label class="user-statistic-name">Completed</label>
+                    <label class="user-statistic-value completed"></label>
                 </div>
             </div>
-            <a href="books_list.html" class="change-page-link">
-                <button type="submit" class="change-page-button">Tracked Books</button>
+            <a href="user_list.html" class="change-page-link">
+                <button class="change-page-button">Tracked Books</button>
             </a>
         </aside>
         <section class="books-container">
-            <header class="book-progress-adding">
-                <label class="progress-label">
-                        Start tracking a book
-                    </label>
-                <div class="progress-container">
-                    <input type="text" class="update-progress" name="isbn" placeholder="ISBN" autocomplete="off">
-                    <button type="submit" class="update-progress-button">Add</button>
+            <header class="book-tracking-container">
+                <label class="track-book-label">
+                    Start tracking a book
+                </label>
+                <div class="available-books">
+                    <input type="text" class="track-book-isbn" name="isbn" placeholder="ISBN" autocomplete="off">
+                    <button class="track-book-button">Track</button>
                 </div>
             </header>
-            <div>
-
+            <div class="books-table">
+                <header class="books-table-cells">
+                    <label class="isbn-cell heading">
+                        ISBN
+                    </label>
+                    <label class="title-cell heading">
+                        Title
+                    </label>
+                    <label class="author-cell heading">
+                        Author
+                    </label>
+                    <label class="pages-cell heading">
+                        Total Pages
+                    </label>
+                </header>
+                <main class="books-info">
+                    <div class="books-table-cells">
+                        <label class="isbn-cell">
+                            9780747532743
+                        </label>
+                        <label class="title-cell">
+                            Harry Potter and the Philosopher's Stone
+                        </label>
+                        <label class="author-cell">
+                            J. K. Rowling
+                        </label>
+                        <label class="pages-cell">
+                            224
+                        </label>
+                    </div>
+                    <div class="books-table-cells">
+                        <label class="isbn-cell">
+                            9780439064873
+                        </label>
+                        <label class="title-cell">
+                            Harry Potter and the Chamber of Secrets
+                        </label>
+                        <label class="author-cell">
+                            J. K. Rowling
+                        </label>
+                        <label class="pages-cell">
+                            341
+                        </label>
+                    </div>
+                    <div class="books-table-cells">
+                        <label class="isbn-cell">
+                            9780439136358
+                        </label>
+                        <label class="title-cell">
+                            Harry Potter and the Prisoner of Azkaban
+                        </label>
+                        <label class="author-cell">
+                            J. K. Rowling
+                        </label>
+                        <label class="pages-cell">
+                            435
+                        </label>
+                    </div>
+                    <div class="books-table-cells">
+                        <label class="isbn-cell">
+                            9780439139601
+                        </label>
+                        <label class="title-cell">
+                            Harry Potter and the Goblet of Fire
+                        </label>
+                        <label class="author-cell">
+                            J. K. Rowling
+                        </label>
+                        <label class="pages-cell">
+                            734
+                        </label>
+                    </div>
+                    <div class="books-table-cells">
+                        <label class="isbn-cell">
+                            9780439358064
+                        </label>
+                        <label class="title-cell">
+                            Harry Potter and the Order of the Phoenix
+                        </label>
+                        <label class="author-cell">
+                            J. K. Rowling
+                        </label>
+                        <label class="pages-cell">
+                            870
+                        </label>
+                    </div>
+                    <div class="books-table-cells">
+                        <label class="isbn-cell">
+                            9780747581109
+                        </label>
+                        <label class="title-cell">
+                            Harry Potter and the Half-Blood Prince
+                        </label>
+                        <label class="author-cell">
+                            J. K. Rowling
+                        </label>
+                        <label class="pages-cell">
+                            612
+                        </label>
+                    </div>
+                    <div class="books-table-cells">
+                        <label class="isbn-cell">
+                            9780545139700
+                        </label>
+                        <label class="title-cell">
+                            Harry Potter and the Deathly Hallows
+                        </label>
+                        <label class="author-cell">
+                            J. K. Rowling
+                        </label>
+                        <label class="pages-cell">
+                            784
+                        </label>
+                    </div>
+                </main>
             </div>
         </section>
     </main>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+    <script src="scripts/firebase-initialization.js"></script>
+    <script src="scripts/data-initialization.js"></script>
+    <script src="scripts/authentication.js"></script>
+    <script src="scripts/listing-tracking-logic.js"></script>
 </body>
 
 </html>

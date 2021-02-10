@@ -10,28 +10,35 @@
 <body>
     <div class="layout-container">
         <div class="form-container">
-
             <form class="auth-form" id="register-form">
                 <h1 class="title">Bookify</h1>
                 <h2 class="description">Start your reading journey</h2>
                 <input type="text" class="auth-input" name="email" placeholder="Email" autocomplete="off">
                 <div id="email-error" class="errors">*</div>
 
-                <input type="text" class="auth-input" name="password" placeholder="Password">
+                <input type="password" class="auth-input" name="password" placeholder="Password">
                 <div id="password-error" class="errors">*</div>
 
-                <input type="text" class="auth-input" name="repeat-password" placeholder="Repeat Password">
+                <input type="password" class="auth-input" name="repeat-password" placeholder="Repeat Password">
                 <div id="repeat-password-error" class="errors">*</div>
                 <button type="submit" class="auth-button register">Register</button>
             </form>
+            <hr class="button-divider">
+            <div class="auth-to-login">
+                <a href="login.html" class="auth-to-login-link">
+                    <button type="submit" class="auth-button login">Already Have an Account?</button>
+                </a>
+            </div>
         </div>
     </div>
     <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
-    <script src="scripts/authentication.js"></script>
+    <script src="scripts/firebase-initialization.js"></script>
     <script src="scripts/data-initialization.js"></script>
+    <script src="scripts/authentication.js"></script>
+    <!-- <script src="scripts/listing-tracking-logic.js" defer></script> -->
 </body>
 
 </html>

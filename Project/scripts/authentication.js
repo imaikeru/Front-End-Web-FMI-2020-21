@@ -1,21 +1,7 @@
-const initializeFirebase = () => {
-    var firebaseConfig = {
-        apiKey: "AIzaSyDITrQRXodSzP7NhmyFMQKZ7qhpMZp4Irs",
-        authDomain: "bookify-deae8.firebaseapp.com",
-        projectId: "bookify-deae8",
-        storageBucket: "bookify-deae8.appspot.com",
-        messagingSenderId: "63070453636",
-        appId: "1:63070453636:web:4088cf2fee0a21a6e4a7d1",
-        measurementId: "G-3H9DRED6JE",
-        databaseURL: "https://bookify-deae8-default-rtdb.europe-west1.firebasedatabase.app/"
-    };
+'use strict';
 
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-    // alert("Initialized firebase");
-}
-
-initializeFirebase();
+const db = firebase.database();
+const rootRef = db.ref('users');
 
 const loginFormElement = document.getElementById("login-form");
 const registerFormElement = document.getElementById("register-form");
@@ -32,6 +18,14 @@ const printErrorMessage = (errorElement, message) => {
     errorElement.style.visibility = "visible";
 }
 
+
+function createUser(user) {
+    rootRef.child(user).set({
+        completed: '0',
+        in_progress: '0',
+        books: '{}'
+    });
+}
 
 const validatePassword = (password, errorElement) => {
     const notEmpty = Boolean(password.length);
@@ -123,9 +117,8 @@ if (loginFormElement) {
         if (hasCorrectEmail && hasCorrectPassword) {
             firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
                 .then((userCredential) => {
-                    // Signed in
                     var user = userCredential.user;
-                    window.location = "F:/FMI/Front-End-Web-FMI-2020-21/Project/user_list.html"
+                    window.location = "books_list.html"
                 })
                 .catch((error) => {
                     var errorCode = error.code;
@@ -133,8 +126,10 @@ if (loginFormElement) {
                 });
 
         } else {
-            // alert("Invalid login data");
+            alert("Invalid login data");
         }
+        emailFormElement.value = "";
+        passwordFormElement.value = "";
     });
 } else if (registerFormElement) {
     registerFormElement.addEventListener("submit", event => {
@@ -153,12 +148,11 @@ if (loginFormElement) {
             if (!passwordsMatch) {
                 printErrorMessage(repeatPasswordErrorFE, "Passwords do not match.");
             } else {
-                alert("passwords match");
                 firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
                     .then((userCredential) => {
                         var user = userCredential.user;
-                        window.location = "F:/FMI/Front-End-Web-FMI-2020-21/Project/user_list.html"
-                        console.log(user);
+                        window.location = "books_list.html";
+                        createUser(user.uid);
                     })
                     .catch((error) => {
                         var errorCode = error.code;
@@ -167,5 +161,9 @@ if (loginFormElement) {
                     });
             }
         }
-    })
+
+        emailFormElement.value = "";
+        passwordFormElement.value = "";
+        repeatPasswordFormElement.value = "";
+    });
 }

@@ -1,3 +1,5 @@
+'use strict';
+
 class Book {
     constructor(isbn, title, author, pages) {
         var _isbn = isbn;
@@ -27,6 +29,10 @@ const books_isbns = ["9780747532743", "9780439064873", "9780439136358", "9780439
 
 const books = new Map();
 
+function getBooksMap() {
+    return books;
+}
+
 function bookFactory() {
     let book = JSON.parse(this.responseText);
 
@@ -47,9 +53,9 @@ function bookFactory() {
 
     let newBook = new Book(isbn, title, author, number_of_pages);
 
-    console.log(newBook.getIsbn(), " ", newBook.getTitle(), " ", newBook.getAuthor(), " ", newBook.getPages());
+    // console.log(newBook.getIsbn(), " ", newBook.getTitle(), " ", newBook.getAuthor(), " ", newBook.getPages());
     books.set(isbn, newBook);
-    console.log(books.size);
+    // console.log(books.size);
 }
 
 const getBooksData = () => {
@@ -60,7 +66,6 @@ const getBooksData = () => {
         const req = "https://openlibrary.org/api/books?bibkeys=ISBN:" + isbn + "&jscmd=data&format=json";
 
         request.open("GET", req);
-        // request.open("GET", "https://openlibrary.org/api/books?bibkeys=ISBN:9780545010221&jscmd=data&format=json");
         request.send();
     });
 }
@@ -68,43 +73,40 @@ const getBooksData = () => {
 getBooksData();
 
 
-// function printer() {
-//     console.log(this.responseText);
-//     let book = JSON.parse(this.responseText);
-
-//     let root;
-
-//     for (let prop in book) {
-//         root = prop;
-//         break;
-//     }
-
-//     book = book[root];
-
-//     console.log(root);
-//     console.log(book);
-
-//     const title = book.title;
-//     const author = book.authors[0].name;
-//     const number_of_pages = book.number_of_pages;
 
 
-//     console.log(title);
-//     console.log(author);
-//     console.log(number_of_pages);
+// function visualizeBooks() {
+//     document.addEventListener('DOMContentLoaded', function() {
+//         let booksInfoContainer = document.querySelector('.books-info');
+//         console.log(booksInfoContainer);
+//         getBooksData();
+//         books.forEach(book => {
+//             console.log(book);
+//             let newBookElement = document.createElement("div");
+//             newBookElement.classList.add("books-table-cells");
+//             let htmlData = `<div class="books-table-cells">
+//                 <label class="isbn-cell">
+//                 ${book.getIsbn()}
+//                 </label>
+//                 <label class="title-cell">
+//                 ${book.getTitle()}
+//                 </label>
+//                 <label class="author-cell">
+//                 ${book.getAuthor()}
+//                 </label>
+//                 <label class="pages-cell">
+//                 ${book.getPages()}
+//                 </label>
+//                 </div>`
+
+//             console.log(htmlData);
+//             newBookElement.innerHTML = htmlData;
+
+//             booksInfoContainer.appendChild(newBookElem);
+//         });
+//     }, false);
+
+//     // window.location = "books_list.html";
 // }
 
-// var request = new XMLHttpRequest();
-
-// request.addEventListener("load", printer);
-// request.open("GET", "https://openlibrary.org/api/books?bibkeys=ISBN:9780545010221&jscmd=data&format=json");
-// request.send();
-
-
-// title   author   date_published number_of_pages (last read page) 
-
-// firebase
-
-// xmlhttprequest
-
-// въпроси по презентациите, разлика между див и секция, какво е бордър бокс и т.н., марджин, паддинг тн тн тн
+// visualizeBooks();

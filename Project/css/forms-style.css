@@ -82,7 +82,20 @@ body {
     width: 100%;
 }
 
+.auth-to-login {
+    width: 100%;
+    justify-content: center;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    display: flex;
+    align-content: center;
+}
+
 .auth-to-register-link {
+    width: 50%;
+}
+
+.auth-to-login-link {
     width: 50%;
 }
 
