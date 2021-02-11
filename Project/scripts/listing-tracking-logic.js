@@ -157,6 +157,7 @@ function updateProgressOnBook(isbn, toAdd) {
         total_pages = parseInt(snapshot.val()['pages']);
 
         if (current_page == total_pages) {
+            alert("You have already finished reading this book.");
             return;
         }
 
